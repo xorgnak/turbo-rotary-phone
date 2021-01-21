@@ -1,6 +1,6 @@
 $!/bin/bash
 
-source /etc/os-release 
+eval `cat /etc/os-release` 
 if [ "$ID" == "debian" ] || [ "$ID" == "ubuntu" ]; 
   then export PM='apt -y'; 
   elif [ "$SYS" == "fedora" ]; 
