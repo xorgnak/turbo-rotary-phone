@@ -9,7 +9,7 @@ else
     echo "no release ID." && exit
 fi
 function scan() {
-    for x in apt yum dnf pacman emerge npm ipkg opkg 
+    for x in apt yum dnf pacman emerge npm ipkg opkg smart pip gem zypper netpkg 0install swaret snap brew
     do
 	w=`which $x 2> /dev/null`
 	if [ "$w" != '' ]; then
