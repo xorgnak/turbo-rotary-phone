@@ -40,7 +40,7 @@ if [ "$0" == '/usr/bin/pmm' ]; then
 	    git clone https://github.com/$1/$2
 	    cd $2
 	else
-	    echo "[`date`][pmm] already have https://github.com/$1/$1" >> ~/.pmm.log
+	    echo "[`date`][pmm] already have https://github.com/$1/$2" >> ~/.pmm.log
 	    cd $2
 	    git pull
 	fi
