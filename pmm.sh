@@ -1,4 +1,5 @@
 #!/bin/bash
+
 source /etc/os-release
 if [ "$ID" == "debian" ] || [ "$ID" == "ubuntu" ]; then
     export PM='apt -y'; 
@@ -7,6 +8,13 @@ elif [ "$ID" == "fedora" ]; then
 else
     echo "no release ID." && exit
 fi
+function scan() {
+    for x in apt dnf pacman emerge
+do
+    
+     "$x: `which $x`"
+done
+}
 function get() { sudo $PM install $*; }
 function log() {
     redis-cli publish "log.$PROJECT" "$1" > /dev/null
