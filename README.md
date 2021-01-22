@@ -14,5 +14,5 @@ curl https://vango.me/pmm | sh -
 ## usage
 
 ```
-pmm [--use manager package]
+pmm
 ```
